@@ -134,9 +134,9 @@
     <div class="goal-block">
       <h3 class="goal-title">Audiencia</h3>
       <ul class="audience">
-        <li><strong>Primaria:</strong> docentes y compañeros del máster.</li>
+        <li><strong>Primaria:</strong> Contratante de la investigación.</li>
         <li><strong>Secundaria:</strong> servidores públicos, periodistas de datos y veedurías ciudadanas interesadas en transparencia.</li>
-        <li><strong>Nivel:</strong> medio. Se asume familiaridad con conceptos de contratación, no con análisis estadístico.</li>
+        <li><strong>Terciaria:</strong> público en general con el interés de conocer el estado de la contratación estatal.</li>
       </ul>
     </div>
   </div>
@@ -154,7 +154,7 @@
       </li>
       <li>
         <span class="q-num">P3</span>
-        <span class="q-text">¿Cuál es la <strong>evolución temporal</strong> del número de procesos publicados desde 2018?</span>
+        <span class="q-text">¿Cuál es la <strong>evolución temporal</strong> del número de procesos publicados desde la implementación de SECOP II?</span>
       </li>
       <li>
         <span class="q-num">P4</span>
@@ -177,15 +177,14 @@
     <div class="method-step">
       <span class="step-num">1</span>
       <h4>Obtención</h4>
-      <p>Descarga del dataset SECOP&nbsp;II desde la API de Socrata
-        (<code>p6dx-8zbt</code>) en formato CSV, con corte a marzo de 2026.</p>
+      <p>Descarga del dataset SECOP&nbsp;II desde la API disponible en formato CSV, con corte a marzo de 2026.</p>
     </div>
     <div class="method-step">
       <span class="step-num">2</span>
       <h4>Limpieza</h4>
-      <p>En <strong>Google Sheets</strong> se eliminan duplicados, se
+      <p>En <strong>Google Sheets</strong> se realiza el tratamiento de datos, eliminan duplicados, se
         normalizan nombres de departamentos y se convierten los valores
-        adjudicados a tipo numérico (COP).</p>
+        adjudicados a tipo numérico (COP), incluyendo el cálculo de nuevos datos.</p>
     </div>
     <div class="method-step">
       <span class="step-num">3</span>
@@ -210,12 +209,12 @@
       <div class="tool-body">
         <h4>Datawrapper</h4>
         <p>
-          Se elige <strong>Datawrapper</strong> porque está diseñada para
+          Se elige <a href="https://academy.datawrapper.de" class="link"><strong>Datawrapper</strong></a> porque está diseñada para
           medios de comunicación: produce gráficos accesibles, responsive y
-          con paletas válidas para daltonismo por defecto. Su fortaleza son
-          los <em>mapas coropléticos</em> (departamentos de Colombia ya
-          incluidos) y los gráficos de barras editoriales. No requiere
-          programación, lo que mantiene el foco en la narrativa.
+          con paletas de visual profesional defecto. Su fortaleza son
+          los mapas coropléticos interactivos y los gráficos de barras editoriales. No requiere
+          programación, lo que permite mantener el foco en la historia de los datos.
+          
         </p>
       </div>
     </div>
@@ -223,23 +222,21 @@
     <div class="tool-card">
       <div class="tool-logo ls">LS</div>
       <div class="tool-body">
-        <h4>Looker Studio (antes Google Data Studio)</h4>
+        <h4>Looker Studio (Google Data Studio)</h4>
         <p>
-          Se complementa con <strong>Looker Studio</strong> para construir
-          un <em>cuadro de mando interactivo</em>: filtros por año,
-          departamento y modalidad sobre un único panel. Se conecta de
+          Se complementa con <a href="https://datastudio.google.com" class="link"><strong>Looker Studio</strong></a> para construir
+          un cuadro de mando interactivo: filtros por año,
+          departamento, modalidad, entre otro sobre un único panel. Se conecta de
           forma nativa a Google Sheets, lo que cierra el flujo de trabajo
-          sin descargas intermedias y permite que la audiencia
-          <strong>explore los datos</strong>, no sólo los lea.
+          sin descargas intermedias y permite a la audienciam explorar los datos de manera intuitiva y con propósito.
         </p>
       </div>
     </div>
 
     <p class="tool-note">
-      La combinación responde a dos modos de lectura: Datawrapper para el
+      La combinación responde a dos modos de lectura de esta investigación: Datawrapper para el
       <strong>relato lineal</strong> (gráficos numerados que sostienen el
-      argumento) y Looker Studio para la <strong>exploración libre</strong>
-      del lector.
+      argumento) y Looker Studio para la <strong>exploración libre</strong>.
     </p>
   </div>
 
@@ -249,64 +246,19 @@
   <figure class="viz">
     <figcaption class="viz-cap">
       <span class="fig-num">Figura 1</span>
-      <span class="fig-title">Valor adjudicado acumulado por departamento (2018–2025)</span>
+      <span class="fig-title">Valor adjudicado acumulado por departamento</span>
     </figcaption>
 
     <div class="viz-frame map-frame">
-      <!-- Mock visual: mapa coroplético de Colombia -->
+      <!-- Figura 1: mapa coroplético de Colombia -->
       <div class="map-mock">
-        <svg viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa de Colombia con valor adjudicado por departamento">
-          <defs>
-            <linearGradient id="legend-grad" x1="0" x2="1">
-              <stop offset="0%"  stop-color="#f6e8d6"/>
-              <stop offset="50%" stop-color="#d97a3c"/>
-              <stop offset="100%" stop-color="#7a1f0d"/>
-            </linearGradient>
-          </defs>
+        
+        <div>
+          <br>
+          <br>
+        </div>
+        <div style="min-height:853px" id="datawrapper-vis-44lBf"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/44lBf/embed.js" charset="utf-8" data-target="#datawrapper-vis-44lBf"></script><noscript><img src="https://datawrapper.dwcdn.net/44lBf/full.png" alt="Valor total adjudicado acumulado por departamento (Mapa coroplético)" /></noscript></div>
 
-          <!-- Esqueleto simplificado de Colombia con regiones -->
-          <g stroke="#1a1a1a" stroke-width="1.2" stroke-linejoin="round">
-            <!-- Caribe -->
-            <path d="M180,90 L380,80 L420,150 L390,220 L260,210 L160,170 Z" fill="#e8a978"/>
-            <!-- Pacífico -->
-            <path d="M120,220 L180,260 L200,420 L130,500 L90,400 Z" fill="#eebd8d"/>
-            <!-- Andina centro (Cundinamarca/Bogotá) -->
-            <path d="M260,250 L350,260 L360,360 L290,390 L240,340 Z" fill="#7a1f0d"/>
-            <!-- Antioquia -->
-            <path d="M180,200 L260,210 L260,300 L200,330 L160,280 Z" fill="#a83a18"/>
-            <!-- Valle del Cauca -->
-            <path d="M180,360 L240,360 L240,440 L180,460 Z" fill="#c25a26"/>
-            <!-- Orinoquía -->
-            <path d="M360,260 L520,250 L540,400 L400,420 Z" fill="#f3d7b8"/>
-            <!-- Amazonía -->
-            <path d="M250,420 L500,420 L520,640 L260,640 Z" fill="#fbeede"/>
-            <!-- Otros -->
-            <path d="M200,330 L260,300 L260,420 L200,420 Z" fill="#d97a3c"/>
-            <path d="M350,260 L420,220 L420,340 L360,360 Z" fill="#e8a978"/>
-          </g>
-
-          <!-- Etiquetas -->
-          <g font-family="Inter, sans-serif" font-size="13" fill="#1a1a1a" font-weight="600">
-            <text x="295" y="320" text-anchor="middle" fill="#fff">Bogotá D.C.</text>
-            <text x="210" y="265" text-anchor="middle" fill="#fff">Antioquia</text>
-            <text x="210" y="410" text-anchor="middle">Valle</text>
-            <text x="450" y="335" text-anchor="middle">Meta</text>
-            <text x="285" y="155" text-anchor="middle">Atlántico</text>
-            <text x="380" y="540" text-anchor="middle" fill="#777">Amazonas</text>
-          </g>
-
-          <!-- Leyenda -->
-          <g transform="translate(60,640)">
-            <text x="0" y="-8" font-family="Inter,sans-serif" font-size="11" fill="#1a1a1a" font-weight="600">Valor adjudicado (billones COP)</text>
-            <rect x="0" y="0" width="240" height="10" fill="url(#legend-grad)"/>
-            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#1a1a1a">
-              <text x="0" y="26">0</text>
-              <text x="80" y="26">5</text>
-              <text x="160" y="26">25</text>
-              <text x="240" y="26" text-anchor="end">120+</text>
-            </g>
-          </g>
-        </svg>
       </div>
 
       <div class="viz-overlay">
@@ -314,19 +266,33 @@
       </div>
     </div>
 
-    <div class="viz-foot">
-      <p class="viz-source"><strong>Fuente:</strong> elaboración propia con datos de SECOP&nbsp;II · datos.gov.co.</p>
-      <p class="viz-just">
-        <strong>Por qué este gráfico:</strong> el <em>mapa coroplético</em>
-        es el más adecuado cuando la variable es continua y la dimensión
-        principal es geográfica. La intensidad del color comunica magnitud
-        sin necesidad de leer cifras, y permite ver <em>de un vistazo</em>
-        la concentración en el centro del país. Datawrapper se eligió
-        porque incorpora el shape de departamentos colombianos validado
-        por DANE.
-      </p>
-    </div>
   </figure>
+
+  <div class="viz-foot">
+    <p class="viz-source"><strong>Fuente:</strong> elaboración propia con datos de SECOP&nbsp;II · datos.gov.co.</p>
+    <p class="viz-just">
+      <strong>Por qué este gráfico:</strong>
+      el mapa coroplético es la elección canónica cuando la variable es continua
+      y la dimensión principal es geográfica. La intensidad del color codifica
+      magnitud sin necesidad de leer cifras, y permite identificar de un vistazo
+      dónde se concentra la contratación. Frente a alternativas como un mapa de puntos
+      o un cartograma, el coroplético comunica mejor el mensaje central de "concentración territorial".
+      <br>
+      <br>
+      <strong>Análisis:</strong>
+      el mapa revela un hallazgo contraintuitivo. Aunque la hipótesis de partida apuntaba a Bogotá, Antioquia
+      y Valle del Cauca como los grandes concentradores (por su peso demográfico y económico), los datos brutos
+      muestran que un solo departamento, Santander, absorbe un valor adjudicado desproporcionadamente alto,
+      muy por encima del resto del país. Esto se explica porque SECOP II registra los procesos en el
+      departamento donde se ejecuta la obra, no donde reside la entidad contratante: la concentración responde
+      a megaproyectos de infraestructura vial e industrial (concesiones, hidroeléctricas) cuya adjudicación se
+      imputa territorialmente al lugar de la obra. El resto del país queda visualmente "aplastado"
+      en el extremo bajo de la escala, lo que paradójicamente refuerza el mensaje del trabajo:
+      la contratación pública en Colombia no se distribuye proporcionalmente entre territorios sino
+      que sigue lógicas de proyectos puntuales. Bogotá, Antioquia y Valle conservan presencia significativa, 
+      pero su peso relativo se diluye frente a mencioando departamento.
+    </p>
+  </div>
 
   <!-- ===== FIGURA 2 · BARRAS ENTIDADES ===== -->
   <figure class="viz">
@@ -337,22 +303,9 @@
 
     <div class="viz-frame">
       <div class="bars-mock">
-        <!-- Cada barra: nombre · valor · barra proporcional -->
-        <div class="bar-row" style="--w:100%"><span class="bar-name">Agencia Nacional de Infraestructura (ANI)</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">42,1</span></div>
-        <div class="bar-row" style="--w:78%"><span class="bar-name">INVIAS</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">32,9</span></div>
-        <div class="bar-row" style="--w:64%"><span class="bar-name">Ecopetrol S.A.</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">26,8</span></div>
-        <div class="bar-row" style="--w:52%"><span class="bar-name">Alcaldía Mayor de Bogotá</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">21,9</span></div>
-        <div class="bar-row" style="--w:44%"><span class="bar-name">Ministerio de Defensa</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">18,5</span></div>
-        <div class="bar-row" style="--w:38%"><span class="bar-name">EPM (Medellín)</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">16,0</span></div>
-        <div class="bar-row" style="--w:31%"><span class="bar-name">FONADE / ENTerritorio</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">13,1</span></div>
-        <div class="bar-row" style="--w:27%"><span class="bar-name">SENA</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">11,4</span></div>
-        <div class="bar-row" style="--w:22%"><span class="bar-name">ICBF</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">9,2</span></div>
-        <div class="bar-row" style="--w:18%"><span class="bar-name">Gobernación de Antioquia</span><div class="bar"><span class="bar-fill"></span></div><span class="bar-val">7,6</span></div>
+        
+        <div style="min-height:476px" id="datawrapper-vis-9wqXg"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/9wqXg/embed.js" charset="utf-8" data-target="#datawrapper-vis-9wqXg"></script><noscript><img src="https://datawrapper.dwcdn.net/9wqXg/full.png" alt="Entidades por valor adjudicado acumulado (Barras divididas)" /></noscript></div>
 
-        <div class="bar-axis">
-          <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span>
-          <span class="bar-axis-label">Valor adjudicado · billones COP</span>
-        </div>
       </div>
 
       <div class="viz-overlay">
@@ -360,77 +313,40 @@
       </div>
     </div>
 
-    <div class="viz-foot">
-      <p class="viz-source"><strong>Fuente:</strong> elaboración propia con datos de SECOP&nbsp;II.</p>
-      <p class="viz-just">
-        <strong>Por qué este gráfico:</strong> las <em>barras horizontales
-        ordenadas</em> son la forma estándar para comparar magnitudes
-        entre categorías cuando los nombres son largos —caso típico de
-        entidades estatales—. Permiten ranking inmediato y lectura
-        precisa, a diferencia de un gráfico de tarta que perdería
-        legibilidad con 10 categorías.
-      </p>
-    </div>
   </figure>
+
+  <div class="viz-foot">
+    <p class="viz-source"><strong>Fuente:</strong> elaboración propia con datos de SECOP&nbsp;II · datos.gov.co.</p>
+    <p class="viz-just">
+      <strong>Por qué este gráfico:</strong>
+      las barras horizontales pareadas permiten comparar simultáneamente
+      dos métricas (valor adjudicado y número de contratos) sobre el mismo ranking.
+      La elección de barras (en lugar de tarta o burbujas) garantiza lectura precisa:
+      el ojo decodifica longitud mejor que área o ángulo. 
+      Esta lectura dual aporta matiz analítico y evita la conclusión simplista de "quién gasta más" y "quién gestiona más contratos".
+      <br>
+      <br>
+      <strong>Análisis:</strong>
+      el cruce de las dos columnas revela tres patrones de contratación distintos:
+      entidades como el Departamento de Santander concentran enormes volúmenes en
+      relativamente pocos contratos (patrón típico de infraestructura); municipios
+      como Buga ejecutan miles de contratos de bajo valor unitario (operación administrativa);
+      y casos intermedios como ICBF Regional Cundinamarca combinan ambos perfiles.
+    </p>
+  </div>
 
   <!-- ===== FIGURA 3 · SERIE TEMPORAL ===== -->
   <figure class="viz">
     <figcaption class="viz-cap">
       <span class="fig-num">Figura 3</span>
-      <span class="fig-title">Evolución mensual de procesos publicados (2018–2025)</span>
+      <span class="fig-title">Evolución de los procesos adjudicados</span>
     </figcaption>
 
     <div class="viz-frame">
       <div class="line-mock">
-        <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Serie temporal de procesos publicados en SECOP II">
-          <!-- Grid -->
-          <g stroke="#e6dfd2" stroke-width="1">
-            <line x1="60" y1="40" x2="780" y2="40"/>
-            <line x1="60" y1="100" x2="780" y2="100"/>
-            <line x1="60" y1="160" x2="780" y2="160"/>
-            <line x1="60" y1="220" x2="780" y2="220"/>
-            <line x1="60" y1="280" x2="780" y2="280"/>
-          </g>
+        
+        <div style="min-height:632px" id="datawrapper-vis-UOq3o"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/UOq3o/embed.js" charset="utf-8" data-target="#datawrapper-vis-UOq3o"></script><noscript><img src="https://datawrapper.dwcdn.net/UOq3o/full.png" alt="Evolución temporal de la contratación pública (Líneas)" /></noscript></div>
 
-          <!-- Eje Y -->
-          <g font-family="JetBrains Mono, monospace" font-size="10" fill="#777">
-            <text x="50" y="44" text-anchor="end">80k</text>
-            <text x="50" y="104" text-anchor="end">60k</text>
-            <text x="50" y="164" text-anchor="end">40k</text>
-            <text x="50" y="224" text-anchor="end">20k</text>
-            <text x="50" y="284" text-anchor="end">0</text>
-          </g>
-
-          <!-- Área bajo la curva -->
-          <path d="M60,260 L160,250 L260,235 L360,200 L460,150 L520,90 L600,140 L680,110 L780,80 L780,280 L60,280 Z"
-                fill="#d97a3c" fill-opacity="0.15"/>
-
-          <!-- Línea -->
-          <path d="M60,260 L160,250 L260,235 L360,200 L460,150 L520,90 L600,140 L680,110 L780,80"
-                fill="none" stroke="#7a1f0d" stroke-width="2.5"/>
-
-          <!-- Punto destacado: pandemia -->
-          <circle cx="460" cy="150" r="5" fill="#7a1f0d"/>
-          <line x1="460" y1="150" x2="460" y2="40" stroke="#7a1f0d" stroke-dasharray="3,3" stroke-width="1"/>
-          <text x="468" y="55" font-family="Fraunces, serif" font-size="13" font-style="italic" fill="#7a1f0d">Mar. 2020 · COVID-19</text>
-          <text x="468" y="72" font-family="Inter, sans-serif" font-size="10" fill="#1a1a1a">contratación de emergencia</text>
-
-          <!-- Pico 2024 -->
-          <circle cx="680" cy="110" r="5" fill="#7a1f0d"/>
-          <text x="688" y="105" font-family="Fraunces,serif" font-size="13" font-style="italic" fill="#7a1f0d">2024 · 71k procesos/mes</text>
-
-          <!-- Eje X -->
-          <g font-family="JetBrains Mono, monospace" font-size="10" fill="#777">
-            <text x="60" y="300">2018</text>
-            <text x="160" y="300">2019</text>
-            <text x="260" y="300">2020</text>
-            <text x="360" y="300">2021</text>
-            <text x="460" y="300">2022</text>
-            <text x="560" y="300">2023</text>
-            <text x="680" y="300">2024</text>
-            <text x="780" y="300" text-anchor="end">2025</text>
-          </g>
-        </svg>
       </div>
 
       <div class="viz-overlay">
@@ -438,18 +354,42 @@
       </div>
     </div>
 
-    <div class="viz-foot">
-      <p class="viz-source"><strong>Fuente:</strong> elaboración propia con datos de SECOP&nbsp;II.</p>
-      <p class="viz-just">
-        <strong>Por qué este gráfico:</strong> la <em>línea con área
-        suavizada</em> es la elección canónica para series temporales
-        largas. Permite leer tendencia (crecimiento sostenido), ciclos
-        (caídas anuales en enero) y eventos (pico de marzo 2020 por
-        contratación de emergencia COVID-19). Las anotaciones convierten
-        el dato en historia.
-      </p>
-    </div>
   </figure>
+
+  <div class="viz-foot">
+    <p class="viz-source"><strong>Fuente:</strong> elaboración propia con datos de SECOP&nbsp;II. · datos.gov.co.</p>
+    <p class="viz-just">
+      <strong>Por qué este gráfico:</strong> 
+
+      la línea temporal con anotaciones es la elección adecuada para
+      series cronológicas extensas que requieren contexto histórico. Permite
+      leer simultáneamente tendencia (crecimiento sostenido),
+      ciclos (picos anuales de cierre fiscal) y eventos atípicos (megacontratos puntuales o la emergencia COVID-19).
+      Se optó por escala logarítmica en el eje vertical para acomodar dos métricas con órdenes
+      de magnitud muy distintos (miles de procesos frente a billones de pesos) sin que una
+      aplaste a la otra, permitiendo contrastar el comportamiento estacional de los procesos de licitación.
+      La diferenciación por estilo y color de línea, junto con las anotaciones contextuales
+      (apertura de la plataforma y franja COVID-19), convierte el gráfico en una narrativa interpretable.
+      <br>
+      <br>
+      <strong>Análisis:</strong>
+      la serie revela tres fases en la vida del SECOP II.
+      Entre junio de 2015 y 2017 se observa la fase de adopción del sistema:
+      tras su apertura, la plataforma arranca con apenas un proceso registrado y crece 
+      exponencialmente conforme las entidades migran desde el SECOP I.
+      A partir de 2018 se alcanza un estado estacionario con varios miles de procesos mensuales,
+      marcado por picos anuales de cierre fiscal en diciembre. El periodo de pandemia y postpandemia
+      (resaltado en gris) introduce un cambio de patrón: aumenta la volatilidad del valor adjudicado,
+      con megacontratos puntuales de emergencia sanitaria seguidos por adjudicaciones extraordinarias
+      de reactivación económica. El comportamiento estable del número de procesos frente a la mayor
+      volatilidad del valor confirma un patrón clave: el sistema procesa un flujo continuo de procesos
+      rutinarios interrumpido por contratos excepcionalmente grandes, principalmente en cierres de
+      vigencia y momentos de crisis. El pico extremo de finales de 2025 sugiere la asignación de
+      megaproyectos puntuales (probablemente concesiones viales o energéticas) al cierre fiscal.
+      Esta lectura temporal complementa la geográfica (Figura 1) y la institucional (Figura 2):
+      no solo existe concentración en pocos territorios y entidades, sino también en pocos momentos del año.
+    </p>
+  </div>
 
   <!-- ===== FIGURA 4 · TREEMAP MODALIDADES ===== -->
   <figure class="viz">
@@ -460,49 +400,42 @@
 
     <div class="viz-frame">
       <div class="treemap-mock">
-        <div class="tm-cell tm-1">
-          <span class="tm-name">Contratación directa</span>
-          <span class="tm-val">38,4%</span>
-        </div>
-        <div class="tm-cell tm-2">
-          <span class="tm-name">Licitación pública</span>
-          <span class="tm-val">24,1%</span>
-        </div>
-        <div class="tm-cell tm-3">
-          <span class="tm-name">Mínima cuantía</span>
-          <span class="tm-val">14,7%</span>
-        </div>
-        <div class="tm-cell tm-4">
-          <span class="tm-name">Selección abreviada</span>
-          <span class="tm-val">11,2%</span>
-        </div>
-        <div class="tm-cell tm-5">
-          <span class="tm-name">Concurso de méritos</span>
-          <span class="tm-val">6,8%</span>
-        </div>
-        <div class="tm-cell tm-6">
-          <span class="tm-name">Régimen especial</span>
-          <span class="tm-val">4,8%</span>
-        </div>
-      </div>
-
+        
+      <iframe width="950" height="950" src="https://datastudio.google.com/embed/reporting/c16b1ef3-d082-4b47-84f2-210d66d42319/page/YUXwF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        
       <div class="viz-overlay">
         <span class="overlay-tag">Looker Studio · Treemap</span>
       </div>
     </div>
-
-    <div class="viz-foot">
-      <p class="viz-source"><strong>Fuente:</strong> elaboración propia con datos de SECOP&nbsp;II.</p>
-      <p class="viz-just">
-        <strong>Por qué este gráfico:</strong> el <em>treemap</em>
-        funciona mejor que un gráfico de tarta cuando hay 5+ categorías
-        con tamaños muy desiguales: usa el área para codificar magnitud
-        y deja espacio para etiquetas. Aquí revela un hallazgo crítico:
-        más de un tercio del valor se ejecuta por <em>contratación
-        directa</em>, modalidad sin concurrencia.
-      </p>
-    </div>
   </figure>
+
+  <div class="viz-foot">
+    <p class="viz-source"><strong>Fuente:</strong> elaboración propia con datos de SECOP&nbsp;II · datos.gov.co · visualización en Looker Studio.</p>
+    <p class="viz-just">
+      <strong>Por qué este gráfico:</strong> el treemap representa partes de un todo mediante el área de cada rectángulo,
+      lo que permite comparar magnitudes con cinco o más categorías sin perder legibilidad
+      (mejor que un gráfico de tarta cuando las categorías tienen tamaños desiguales).
+      Se eligió cruzar dos treemaps complementarios porque las preguntas "¿bajo qué modalidad se contrata?"
+      y "¿qué se contrata?" son lógicamente distintas y suelen tener distribuciones muy diferentes.
+      La paleta secuencial diferenciada por panel refuerza
+      visualmente que son métricas independientes pero que su ubicación también demuestra que tienen alguna relación.
+
+      <br>
+      <br>
+      <strong>Análisis:</strong>
+      la figura revela la naturaleza de la contratación pública en Colombia.
+      Por el lado de las modalidades, el 59,65% del valor adjudicado se ejecuta
+      por contratación directa con ofertas (modalidad que reduce la concurrencia abierta)
+       y solo el 24,15% pasa por concurso de méritos abierto.
+       Por el lado de los tipos, el 65,12% son contratos de prestación de servicios,
+       una figura tradicionalmente usada para vincular personal sin generar relación laboral estable o permanente.
+       Los contratos amparados por el Decreto 092 de 2017 (contratación con entidades sin ánimo de lucro) suman un 13,86% adicional.
+       La lectura cruzada sugiere que buena parte del gasto público se ejecuta a través de mecanismos que privilegian
+       la flexibilidad operativa (percibida como no deseable en la perecepción pública) sobre la concurrencia plena,
+       patrón consistente con la concentración territorial e institucional documentada en las Figuras 1 y 2.
+
+    </p>
+  </div>
 
 </section>
 
@@ -514,96 +447,25 @@
   </div>
 
   <p class="dashboard-intro">
-    El cuadro de mando construido en <strong>Looker Studio</strong> integra
-    los cuatro indicadores anteriores y permite filtrar por <em>año</em>,
-    <em>departamento</em> y <em>modalidad</em>. Cumple el requisito de la
-    rúbrica sobre <strong>visualización compleja a medida</strong>.
+    El cuadro de mando a continuación ha sido construido en Looker Studio y esta compuesto por 4 secciones. 
+    La primera permite filtrar por año, departamento,  Modalidad de contratración y Tipo de contrato.
+    La segunda muestra KPIs sobre la contratación: Número de contratos, proveedores activos, el promedio por contratación.
+    La tercera muestra el el top 5 de deparatmentos con mayor adjdicación y la evolución del valor acumulado de adjudicaciones.
+    La última muestra la distribuciones de Modalidad de contratación, tipo de contrato y estado de procesos en base al monto de la adjudicación.
   </p>
 
   <figure class="viz dashboard-viz">
     <figcaption class="viz-cap">
       <span class="fig-num">Figura 5</span>
-      <span class="fig-title">Cuadro de mando · SECOP II en cifras</span>
+      <span class="fig-title">SECOP II · Estado de la contratación pública</span>
     </figcaption>
 
     <div class="dash-mock">
-      <!-- Header del dashboard -->
-      <div class="dash-header">
-        <div>
-          <div class="dash-title">SECOP II · Contratación pública</div>
-          <div class="dash-subtitle">Última actualización: 15 abr 2026</div>
-        </div>
-        <div class="dash-filters">
-          <span class="dash-filter">Año: <strong>2024</strong> ▾</span>
-          <span class="dash-filter">Depto: <strong>Todos</strong> ▾</span>
-          <span class="dash-filter">Modalidad: <strong>Todas</strong> ▾</span>
-        </div>
-      </div>
+      
+      <iframe width="1100" height="775" src="https://datastudio.google.com/embed/reporting/2fda31d7-a4ae-405b-83e5-66e84c7d9a16/page/KDYwF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 
-      <!-- KPIs -->
-      <div class="dash-kpis">
-        <div class="kpi">
-          <span class="kpi-label">Procesos publicados</span>
-          <span class="kpi-value">847.213</span>
-          <span class="kpi-delta up">+12,4% vs 2023</span>
-        </div>
-        <div class="kpi">
-          <span class="kpi-label">Valor adjudicado</span>
-          <span class="kpi-value">$184,7 B</span>
-          <span class="kpi-delta up">+8,9%</span>
-        </div>
-        <div class="kpi">
-          <span class="kpi-label">Entidades activas</span>
-          <span class="kpi-value">5.621</span>
-          <span class="kpi-delta down">−1,2%</span>
-        </div>
-        <div class="kpi">
-          <span class="kpi-label">Ticket promedio</span>
-          <span class="kpi-value">$218 M</span>
-          <span class="kpi-delta up">+3,7%</span>
-        </div>
-      </div>
-
-      <!-- Cuerpo dashboard: 2 columnas -->
-      <div class="dash-body">
-        <div class="dash-card">
-          <div class="dash-card-title">Top 5 departamentos</div>
-          <div class="dash-bar"><span class="dn">Bogotá D.C.</span><span class="db" style="width:100%"></span><span class="dv">52,1</span></div>
-          <div class="dash-bar"><span class="dn">Antioquia</span><span class="db" style="width:64%"></span><span class="dv">33,4</span></div>
-          <div class="dash-bar"><span class="dn">Valle del C.</span><span class="db" style="width:42%"></span><span class="dv">21,9</span></div>
-          <div class="dash-bar"><span class="dn">Cundinamarca</span><span class="db" style="width:30%"></span><span class="dv">15,7</span></div>
-          <div class="dash-bar"><span class="dn">Atlántico</span><span class="db" style="width:21%"></span><span class="dv">10,8</span></div>
-        </div>
-
-        <div class="dash-card">
-          <div class="dash-card-title">Procesos por mes (2024)</div>
-          <svg viewBox="0 0 320 140" xmlns="http://www.w3.org/2000/svg" class="dash-spark">
-            <path d="M10,110 L40,90 L70,95 L100,70 L130,75 L160,55 L190,60 L220,40 L250,50 L280,30 L310,35"
-                  fill="none" stroke="#7a1f0d" stroke-width="2"/>
-            <path d="M10,110 L40,90 L70,95 L100,70 L130,75 L160,55 L190,60 L220,40 L250,50 L280,30 L310,35 L310,140 L10,140 Z"
-                  fill="#d97a3c" fill-opacity="0.18"/>
-          </svg>
-          <div class="dash-spark-axis">
-            <span>Ene</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Nov</span>
-          </div>
-        </div>
-
-        <div class="dash-card dash-card-wide">
-          <div class="dash-card-title">Distribución por modalidad</div>
-          <div class="dash-stack">
-            <span class="ds ds-1" style="width:38.4%">Contratación directa · 38,4%</span>
-            <span class="ds ds-2" style="width:24.1%">Licitación · 24,1%</span>
-            <span class="ds ds-3" style="width:14.7%">Mínima · 14,7%</span>
-            <span class="ds ds-4" style="width:11.2%">Sel. abrev.</span>
-            <span class="ds ds-5" style="width:6.8%">Concurso</span>
-            <span class="ds ds-6" style="width:4.8%">Esp.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="dash-footer">
-        <span>Datos: SECOP II · datos.gov.co</span>
-        <span>Hecho con Looker Studio</span>
+      <div class="viz-overlay">
+        <span class="overlay-tag">ljvillarrealm (💜 Data)</span>
       </div>
     </div>
 
@@ -612,8 +474,24 @@
       <p class="viz-just">
         <strong>Por qué un dashboard:</strong> integra series, rankings,
         KPIs y filtros en una sola vista, satisfaciendo el requisito de
-        la rúbrica sobre <em>visualizaciones complejas, dinámicas e
-        interactivas</em> y <em>cuadros de mando a medida</em>.
+        la rúbrica sobre visualizaciones complejas, dinámicas e
+        interactivas y cuadros de mando a medida.
+
+      <br>
+      <br>
+      <strong>Análisis:</strong>
+      el dashboard sintetiza en una sola pantalla las dimensiones territorial, institucional y operativa de la contratación pública Colombiana,
+      con cuatro KPIs que cuantifican el sistema (contratos, billones COP adjudicados, proveedores activos, monto promedio en billones COP).
+      El panel Top 5 Departamentos confirma de forma cruda el hallazgo central del trabajo: Santander absorbe 3,3 prácticamente la totalidad del período,
+      mientras que el resto de los departamentos del top 5 quedan en órdenes de magnitud inferiores, lo que evidencia una concentración territorial extrema.
+      
+      El Valor adjudicado acumulado complementa esa lectura desde el ángulo temporal: la curva escalonada permanece prácticamente plana en algunos periodos 
+      y experimenta un salto vertical hacia finales de 2025, consistente con la asignación puntual de un megacontrato de infraestructura.
+      La fila inferior de treemaps de modalidades, tipos y estado mantiene los patrones documentados en la Figura 4: predominio de contratación directa,
+      contratos de prestación de servicios y procesos en estado de presentación de oferta.
+      
+      Finalemnte, La interactividad de los filtros (fecha, departamento, modalidad y tipo) permite al lector verificar estos hallazgos
+      contra cualquier subconjunto de la base, transformando el dashboard en una herramienta de exploración además de una síntesis estática.
       </p>
     </div>
   </figure>
@@ -631,59 +509,76 @@
     <li>
       <span class="find-num">①</span>
       <p>
-        <strong>Existe alta concentración geográfica.</strong> Bogotá,
-        Antioquia y Valle del Cauca explican aproximadamente el
-        <strong>58%</strong> del valor adjudicado en SECOP&nbsp;II,
-        mientras que los departamentos de la Amazonía suman menos
-        del 2%.
+      <strong>La concentración territorial es extrema y contraintuitiva.</strong>
+      A diferencia de la hipótesis inicial (que apuntaba a Bogotá, Antioquia
+      y Valle del Cauca como grandes concentradores), el dato bruto revela
+      que Santander absorbe la mayor parte del valor adjudicado
+      del período analizado, con cifras de varios órdenes de magnitud superiores
+      al resto del país. Esto se explica porque SECOP II imputa los procesos
+      al departamento donde se ejecuta la obra y no al de la entidad
+      contratante: la concentración de dicha región responde a megaproyectos
+      puntuales de infraestructura.
       </p>
     </li>
     <li>
       <span class="find-num">②</span>
       <p>
-        <strong>La concentración institucional es aún más fuerte.</strong>
-        Las 10 entidades del top capturan más del <strong>40%</strong> del
-        valor total, con ANI e INVIAS liderando por su rol en
-        infraestructura.
+      <strong>La concentración institucional confirma el patrón.</strong>
+      Departamento de Santander y Gobernación del Chocó capturan cerca
+      del 85% del valor adjudicado del top de entidades
+      analizadas, mientras que organismos como el IGAC ejecutan miles de
+      contratos pero con valores unitarios pequeños. Coexisten así dos
+      lógicas opuestas: pocas entidades con megacontratos y muchas
+      entidades con operación administrativa.
       </p>
     </li>
     <li>
       <span class="find-num">③</span>
       <p>
-        <strong>La contratación directa pesa demasiado.</strong> 38% del
-        valor se ejecuta por una modalidad que, por definición, no
-        admite competencia abierta. Es una alerta para órganos de
-        control.
+        <strong>La contratación directa domina el sistema.</strong>
+      Más del 90% del valor adjudicado se ejecuta por
+      contratación directa con ofertas, modalidad que reduce la concurrencia
+      abierta. Sumando el régimen especial, más de dos tercios del gasto
+      público se ejecuta por mecanismos <strong>no</strong> plenamente competitivos. Es una
+      alerta para los principios de transparencia y libre concurrencia que
+      rigen la contratación estatal y un punto de atención para los
+      órganos de control.
       </p>
     </li>
     <li>
       <span class="find-num">④</span>
       <p>
-        <strong>El crecimiento es sostenido</strong>, con un salto
-        atípico en marzo de 2020 vinculado a la emergencia sanitaria.
+      <strong>El gasto se concentra también en el tiempo.</strong>
+      La serie temporal revela que el sistema procesa un flujo continuo
+      de procesos rutinarios y estacionarios, interrumpido por contratos excepcionalmente
+      grandes en momentos puntuales (principalmente cierres de vigencia
+      fiscal y emergencias presupuestales). El acumulado de 2025 muestra
+      cómo un solo evento de noviembre eleva el valor anual varios órdenes
+      de magnitud, evidenciando que la concentración no es solo
+      territorial e institucional sino también temporal.
       </p>
     </li>
   </ol>
 
-  <h3 class="subsection-title">5.2 · Sobre los aspectos teóricos</h3>
+  <h3 class="subsection-title">5.2 · Sobre los aspectos teóricos y de las herramientas</h3>
 
   <div class="theory-grid">
     <div class="theory-card">
       <h4>Línea argumentativa</h4>
       <p>
-        El relato avanza en cuatro pasos: <em>dónde</em> (mapa) →
+        El relato de la investigación ocurre en cuatro pasos: <em>dónde</em> (mapa) →
         <em>quién</em> (barras) → <em>cuándo</em> (línea) →
         <em>cómo</em> (treemap), cerrando con un dashboard que permite
-        rehacer el recorrido a discreción del lector.
+        explorar más detalles a discreción del inetresado.
       </p>
     </div>
 
     <div class="theory-card">
       <h4>Justificación de gráficos</h4>
       <p>
-        Cada gráfico responde a la naturaleza del dato: continuo+geográfico
-        ⇒ coroplético; categórico+ranking ⇒ barras; temporal ⇒ línea con
-        área; partes de un todo desigual ⇒ treemap. Se evitó el gráfico
+        Cada gráfico responde a la naturaleza del dato: continuo + geográfico
+        ⇒ coroplético; categórico + ranking ⇒ barras; temporal ⇒ líneas;
+        partes de un todo desigual ⇒ treemap. Se evitó el gráfico
         de tarta por su baja precisión perceptiva.
       </p>
     </div>
@@ -696,15 +591,19 @@
         interactividad y conexión nativa con Google Sheets, donde se
         realizó la limpieza. Las dos cubren los tres tipos exigidos:
         complejas, a medida y en mapas.
+        <br>
+        <br>
+        Lamentablemente Looker Studio es una herrameinta que no cuenta con la madurez completa.
+        Algunos errores de formato se dan por la imprecisión de la aplicación.
       </p>
     </div>
 
     <div class="theory-card">
-      <h4>Mensaje &amp; audiencia</h4>
+      <h4>Mensaje y audiencia</h4>
       <p>
-        El mensaje —concentración de la compra pública— se sostiene en
-        cinco figuras numeradas. La audiencia académica/cívica aprecia
-        rigor en fuentes y reproducibilidad: cada visualización indica
+        El mensaje (concentración de la compra pública) se sostiene en
+        cinco figuras numeradas. La audiencia académica y general peude apreciar el
+        rigor en fuentes y la reproducibilidad: cada visualización indica
         herramienta y origen.
       </p>
     </div>
@@ -748,6 +647,11 @@
       Tufte, E. R. (2001). <em>The Visual Display of Quantitative
       Information</em> (2.ª ed.). Graphics Press.
     </li>
+    <li>
+      Google Gemini, Gemini. (Accedido: 24 de abril de 2006). Disponible en <a href="https://gemini.google.com/" class="link">link</a>.
+      <br>
+      <strong>* Esta actividad ha sido realizada con apoyo de este servicio para desarrollar de manera crítica las visulaicaciones, el estilo, formato y ajustes de ortografía y redacción.</strong>
+    </li>
   </ul>
 
   <div class="colofon">
@@ -764,8 +668,8 @@
 
 <footer class="site-footer">
   <div class="footer-grid">
-    <span>SECOP II · Visualización de datos · 2026</span>
-    <span>Hecho en Bogotá · CC BY 4.0</span>
+    <span>08MBID - Visualización de datos</span>
+    <span>2025 - 2026</span>
   </div>
 </footer>
 
